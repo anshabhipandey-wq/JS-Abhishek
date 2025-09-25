@@ -14,7 +14,7 @@ const regularUser = {
     }
 }
 // console.log(regularUser.fullname);
-console.log(regularUser.fullname.userfullname.firstname);
+// console.log(regularUser.fullname.userfullname.firstname);
 
 // console.log(tinderUser);
 
@@ -25,7 +25,7 @@ const obj3 = {5: "a", 6: "b"}
 // const obj4 = {obj1, obj2};
 // const obj4 = Object.assign({}, obj1, obj2, obj3); 
 const obj4 = {...obj1, ...obj2};
-console.log(obj4);
+// console.log(obj4);
 
 const user = [
     {
@@ -46,11 +46,40 @@ const user = [
     },
 ]
 
-user[1].email
+// user[1].email
 
-console.log(tinderUser);
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
 
-console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+
+
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "hitesh"
+}
+
+// course.courseInstructor
+const {courseInstructor: instructor} = course;
+// console.log(courseInstructor);
+console.log(instructor);
+
+// JSON Structure 
+// {
+//     "name": 'abhishek',
+//     "course": "js",
+//     "prise": "free"
+// }
+
+// Arrays API
+// [
+//     {},
+//     {},
+//     {}
+// ]
+
+// API ke liye ek JSON formatter hota hai 
