@@ -74,7 +74,7 @@ form.addEventListener('submit', function(e){
 });
 ```
 
-## Project 2 solution
+## Project 3 solution
 
 ```javascript
 const clock = document.getElementById('clock');
