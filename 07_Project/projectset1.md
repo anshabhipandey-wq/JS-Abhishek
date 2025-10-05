@@ -33,7 +33,7 @@ buttons.forEach(function (button){
 });
 
 ```
-## Project 2 solution
+## Project 2 solution 
 
 ```javascript
 const form = document.querySelector('form');
