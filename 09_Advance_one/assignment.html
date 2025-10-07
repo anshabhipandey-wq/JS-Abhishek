@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GitHub Profile Card</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #0d1117;
+        color: #fff;
+      }
+
+      .card {
+        background: #161b22;
+        border-radius: 15px;
+        padding: 20px;
+        text-align: center;
+        width: 300px;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+        transition: 0.3s;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 2px solid #58a6ff;
+        margin-bottom: 10px;
+      }
+
+      .name {
+        font-size: 1.3em;
+        font-weight: bold;
+        color: #58a6ff;
+      }
+
+      .followers {
+        margin-top: 10px;
+        font-size: 1.1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card" id="profileCard">
+      <h2>Loading...</h2>
+    </div>
+
+    <script>
+      const requestUrl = "https://api.github.com/users/anshabhipandey-wq";
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", requestUrl);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          const data = JSON.parse(this.responseText);
+
+          // Create the card dynamically
+          const card = document.getElementById("profileCard");
+          card.innerHTML = `
+          <img src="${data.avatar_url}" alt="Avatar" class="avatar">
+          <div class="name">${data.name || "No Name Available"}</div>
+          <div class="followers">👥 Followers: ${data.followers}</div>
+        `;
+        }
+      };
+      xhr.send();
+    </script>
+  </body>
+</html>
